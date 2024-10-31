@@ -50,6 +50,52 @@ li {
   color: #77ecf0;
 }
 
+
+@media(min-width: 481px) and (max-width: 1200px)  {
+    header {
+        height: 6rem;
+
+      }
+      
+      .header-scrolled {
+        background-color: rgba(16, 16, 16, 0.7); /* Transparant */
+        align-items: center;
+        height: 4rem;
+      }
+
+      .header_container {
+  
+        grid-template-columns: 7fr 3fr;
+
+
+      }
+
+      ul {
+
+        display: flex; /* Zorgt ervoor dat knoppen op de volgende regel springen indien nodig */
+        gap: 1rem;
+
+      }
+    
+
+}
+
+
+
+@media(min-width: 319px) and (max-width: 480px)  {
+
+
+      .header_container {
+  
+        grid-template-columns: 6fr 6fr;
+
+
+      }
+
+    
+
+}
+
 /*end header*/
 
 /* over mij */
@@ -64,6 +110,8 @@ li {
   grid-template-columns: 6fr 6fr;
   justify-content: center;
 }
+
+
 .tekstDynamisch {
   font-size: 1.3rem;
   color: #77ecf0;
@@ -120,6 +168,79 @@ button:hover {
   box-shadow: 0 0 10px #77ecf0, 0 0 20px #77ecf0, 0 0 30px #77ecf0;
 }
 
+
+
+
+@media(min-width: 481px) and (max-width: 1200px)  {
+    .overMijContainer{
+        grid-template-columns: 12fr ;
+    }
+
+    .ico{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; 
+        gap: 1rem; /* Ruimte tussen de knoppen */
+        margin-top: 2rem; 
+    }
+    .knop-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Zorgt ervoor dat knoppen op de volgende regel springen indien nodig */
+        gap: 1rem; /* Ruimte tussen de knoppen */
+        margin-top: 2rem; 
+    }
+
+    button {
+        background-color: transparent;
+        color: #77ecf0;
+        border-radius: 20px;
+        margin-top: 1rem;
+        height: 3rem;
+        width: 7rem;
+        border: #77ecf0 1px solid;
+        position: relative;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+      }
+      
+      button::before {
+        content: '';
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(120deg, transparent, rgba(119, 236, 240, 0.5), transparent);
+        animation: laser-glow 3s linear infinite;
+        transform: rotate(45deg);
+      }
+
+      button:active {
+        box-shadow: 0 0 15px #77ecf0;
+      }
+      
+      
+      @keyframes laser-glow {
+        0% {
+          top: -100%;
+          left: -100%;
+        }
+        50% {
+          top: 100%;
+          left: 100%;
+        }
+        100% {
+          top: -100%;
+          left: -100%;
+        }
+      }
+      
+
+  }
+
 /* Basisinstellingen voor de laserpointer */
 
 .laser {
@@ -142,6 +263,8 @@ button:hover {
   border-radius: 8px;
   margin-top: 7rem;
   color: #f8f8f2;
+  
+
 }
 .over-Safety h2 {
   text-align: center;
@@ -182,6 +305,7 @@ video {
   gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
 
 .veiligheid-punt {
@@ -193,6 +317,7 @@ video {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0 0 5px #77ecf0, 0 0 10px #77ecf0, 0 0 10px #77ecf0;
 }
 
 .veiligheid-punt img {
