@@ -54,7 +54,7 @@ li {
 @media(min-width: 481px) and (max-width: 1200px)  {
     header {
         height: 6rem;
-
+        
       }
       
       .header-scrolled {
@@ -66,14 +66,14 @@ li {
       .header_container {
   
         grid-template-columns: 7fr 3fr;
+        grid-auto-flow: column;
 
 
       }
 
       ul {
 
-        display: flex; /* Zorgt ervoor dat knoppen op de volgende regel springen indien nodig */
-        gap: 1rem;
+           
 
       }
     
@@ -82,19 +82,7 @@ li {
 
 
 
-@media(min-width: 319px) and (max-width: 480px)  {
 
-
-      .header_container {
-  
-        grid-template-columns: 6fr 6fr;
-
-
-      }
-
-    
-
-}
 
 /*end header*/
 
@@ -241,6 +229,78 @@ button:hover {
 
   }
 
+
+  @media(min-width: 319px) and (max-width: 480px)  {
+
+    .overMijContainer{
+        grid-template-columns: 12fr ;
+    }
+
+    .ico{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; 
+        gap: 1rem; /* Ruimte tussen de knoppen */
+        margin-top: 2rem; 
+    }
+    .knop-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Zorgt ervoor dat knoppen op de volgende regel springen indien nodig */
+        gap: 1rem; /* Ruimte tussen de knoppen */
+        margin-top: 2rem; 
+    }
+
+    button {
+        background-color: transparent;
+        color: #77ecf0;
+        border-radius: 20px;
+        margin-top: 1rem;
+        height: 3rem;
+        width: 7rem;
+        border: #77ecf0 1px solid;
+        position: relative;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+      }
+      
+      button::before {
+        content: '';
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(120deg, transparent, rgba(119, 236, 240, 0.5), transparent);
+        animation: laser-glow 3s linear infinite;
+        transform: rotate(45deg);
+      }
+
+      button:active {
+        box-shadow: 0 0 15px #77ecf0;
+      }
+      
+      
+      @keyframes laser-glow {
+        0% {
+          top: -100%;
+          left: -100%;
+        }
+        50% {
+          top: 100%;
+          left: 100%;
+        }
+        100% {
+          top: -100%;
+          left: -100%;
+        }
+      }
+      
+
+
+  }
 /* Basisinstellingen voor de laserpointer */
 
 .laser {
