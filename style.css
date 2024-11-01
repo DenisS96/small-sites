@@ -316,3 +316,118 @@ button:hover {
 }
 /* Einde voor de laserpointer */
 
+
+
+
+.quote-section {
+    background: linear-gradient(135deg, #202122, #2c2d30);
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    color: #f8f8f8;
+    text-align: center;
+    
+  }
+  
+  .quote-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .quote-section h2 {
+    color: #77ecf0;
+    margin-bottom: 1rem;
+  }
+  
+  .quote-section p {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  
+  .quote-form {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .quote-form input, .quote-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #77ecf0;
+    background-color: #2c2d30;
+    color: #f8f8f8;
+  }
+  
+  .quote-form input::placeholder, .quote-form textarea::placeholder {
+    color: #b0b0b0;
+  }
+  
+  .quote-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .quote-form button {
+    background-color: #77ecf0;
+    color: #202122;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    cursor: none;
+  }
+  
+  .quote-form button:hover {
+    background-color: #5ab9c1;
+  }
+  
+
+
+
+
+  .reviews-section {
+    background: linear-gradient(180deg, #1f1f21, #3a3b3e), url('path/to/your-background-image.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    padding: 6rem 2rem; /* Hogere padding voor meer hoogte */
+    color: #f8f8f8;
+    text-align: center;
+    border-radius: 15px;
+  }
+  
+  .reviews-section h2 {
+    color: #77ecf0;
+    margin-bottom: 2.5rem; /* Meer ruimte onder de titel */
+  }
+  
+  .reviews-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .review-card {
+    background-color: rgba(32, 33, 34, 0.9); /* Transparante achtergrond voor meer diepte */
+    padding: 2rem; /* Grotere padding voor een hogere layout */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .review-text {
+    font-size: 1.1rem; /* Iets groter lettertype voor leesbaarheid */
+    margin-bottom: 1.5rem;
+  }
+  
+  .review-author {
+    font-size: 1rem;
+    color: #77ecf0;
+    font-weight: bold;
+  }
+  
+
+  .review-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
